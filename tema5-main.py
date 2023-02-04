@@ -4,13 +4,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    nombre = "Juan"
-    lista = ["Español","Ingles","Frances"]
-    return render_template("index.html",nombre = nombre, lista = lista)
+    nombre = "Filemona"
+    c = ['Espanol','Ingles','Quimica']
+   
+    return render_template("index.html", nombre = nombre, c = c)
 
 @app.route("/usuarios")
-def usuarios():
+def user():
     return render_template("archivo2.html")
 
-if __name__=="__main__":
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug = True)
+
